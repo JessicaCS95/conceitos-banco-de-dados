@@ -30,6 +30,7 @@ h1{
     text-align:center;
     text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.5);
     margin: 3rem;
+    padding: 2rem 0;
 }
 
 h2{
@@ -47,18 +48,35 @@ p{
     
 }
 
-li{
-    font-size: 1.8rem;
-    margin: 1rem 20rem;
+ul{
+    margin: 1rem 17rem;
     color:rgb(6, 6, 31);
 }
 
-.lista2{
-    margin: 1rem 1rem;
+li{
+    font-size: 1.8rem;
+    margin: 1rem 5rem;
     color:rgb(6, 6, 31);
 }
+
 
 strong{
     font-size: 1.8rem;
     color: rgb(29, 20, 100);
+}
+
+@media only screen and (max-width: 1030px){
+
+   
+    h1, h2, p{
+        margin: 1rem 5rem;
+    }
+
+    li{
+        margin: 1rem 5rem;
+    }
+
+    ul{
+        margin: 1rem 2rem;
+    }
 }
