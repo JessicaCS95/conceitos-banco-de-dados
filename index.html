@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Conceitos Banco de Dados</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <h1>Conceitos Banco de Dados</h1>
+        <h2>Normas (Normalização de banco de dados)</h2>
+        <p>Normalização é o processo de organização dos dados em um banco de dados para reduzir a redundância e melhorar a integridade dos dados. Esse processo divide as grandes tabelas em tabelas menores e estabelece relacionamentos entre elas, seguindo um conjunto de regras chamadas de formas normais. A principal vantagem da normalização é garantir que as atualizações, exclusões e inserções sejam feitas de maneira eficiente e sem inconsistências.</p>
+        <h2>Redundância</h2>
+        <p>Redundância em banco de dados refere-se à duplicação de dados. Ela pode ser intencional ou acidental. Em alguns casos, pequenas redundâncias podem ser toleráveis para melhorar o desempenho da consulta, mas o excesso de redundância pode levar a inconsistências e a um maior espaço de armazenamento. A normalização, como mencionado anteriormente, busca minimizar essa duplicação.</p>
+        <h2>Concorrência</h2>
+        <p>Concorrência ocorre quando múltiplas operações tentam acessar ou modificar dados ao mesmo tempo. Em bancos de dados, isso pode causar conflitos ou inconsistências, especialmente quando diferentes transações tentam modificar o mesmo dado simultaneamente. Para resolver esses problemas, os sistemas de gerenciamento de banco de dados implementam controle de concorrência, como bloqueios (locks) ou versionamento.</p>
+        <h2>Integridade</h2>
+        <p>A integridade dos dados refere-se à manutenção da precisão e consistência das informações durante todo o seu ciclo de vida, garantindo que os dados sejam gravados e armazenados de forma confiável para que possam ser recuperados mesmo diante de falhas como erros humanos ou de hardware. Para isso, são aplicados procedimentos de verificação e validação, corrigindo possíveis inconsistências.</p>
+
+<p>Existem dois tipos de integridade de dados:</p>
+
+<ul>
+  <li>
+    <strong>Integridade Física</strong>: Trata dos desafios relacionados ao armazenamento, como falhas mecânicas, desastres naturais e quedas de energia. Medidas como redundância de hardware e migração para a nuvem ajudam a proteger os dados.
+  </li>
+  <li>
+    <strong>Integridade Lógica</strong>: Protege os dados em bancos relacionados a erros e ataques. Ela se divide em:
+    <ul class="lista2">
+      <li><strong>Integridade da Entidade</strong>: Garante que não haja campos nulos ou duplicados nas tabelas.</li>
+      <li><strong>Integridade Referencial</strong>: Mantém a consistência dos dados por meio de chaves de acesso e restrições.</li>
+      <li><strong>Integridade de Domínio</strong>: Garante que os valores em cada coluna sigam regras específicas de formato e tipo.</li>
+      <li><strong>Integridade Definida pelo Usuário</strong>: Permite a criação de regras personalizadas para atender necessidades específicas.</li>
+    </ul>
+  </li>
+</ul>
+        <h2>Consistência</h2>
+        <p>Consistência garante que, após qualquer operação de banco de dados, o sistema sempre estará em um estado válido. Por exemplo, uma transação que quebra uma regra de integridade do banco de dados será revertida para garantir que o sistema permaneça consistente. O conceito está fortemente relacionado à integridade e faz parte do conjunto de propriedades ACID (Atomicidade, Consistência, Isolamento, Durabilidade) que regem as transações em bancos de dados.</p>
+        <h2>Criptografia</h2>
+        <p>Criptografia é a técnica de proteger os dados convertendo-os em um formato ilegível para aqueles que não possuem a chave de decodificação. Em bancos de dados, a criptografia pode ser usada para proteger informações sensíveis tanto em repouso (dados armazenados) quanto em trânsito (dados sendo transmitidos entre servidores e clientes).
+        </p>
+        <h2>Autenticação</h2>
+        <p>Autenticação refere-se ao processo de verificar a identidade de um usuário ou sistema antes de permitir o acesso ao banco de dados. Esse processo geralmente envolve a inserção de um nome de usuário e senha, mas pode incluir fatores adicionais, como autenticação multifator (MFA), para aumentar a segurança.</p>
+        <h2>SQL Injection</h2>
+        <p>SQL Injection é uma técnica de ataque em que um invasor insere código malicioso em uma consulta SQL para manipular ou roubar informações do banco de dados. Esse tipo de ataque é comum em aplicativos que não validam adequadamente as entradas dos usuários e é uma ameaça grave à segurança do banco de dados.</p>
+        <h2>Ameaças</h2>
+        <p>Ameaças em bancos de dados incluem qualquer risco que possa comprometer a integridade, a confidencialidade ou a disponibilidade dos dados. Exemplos de ameaças incluem SQL Injection, acesso não autorizado, malwares, falhas de hardware e violações de dados.</p>
+        <h2>Controle de Acesso</h2>
+        <p>Controle de acesso refere-se à prática de garantir que apenas usuários autorizados possam acessar ou modificar dados em um banco de dados. Os sistemas de controle de acesso podem usar diferentes níveis de permissões, como leitura, escrita e exclusão, para gerenciar o que cada usuário pode fazer.</p>
+        <h2>Cópia de Segurança (Backup)</h2>
+        <p>Cópia de segurança (ou backup) é a criação de uma cópia dos dados armazenados em um banco de dados, com o objetivo de garantir que eles possam ser restaurados em caso de falha no sistema, exclusão acidental ou ataque malicioso.</p>
+        <h2>Restore</h2>
+        <p>Restore é o processo de recuperação dos dados a partir de uma cópia de segurança. Em caso de falha ou corrupção de dados, o restore é realizado para restaurar o banco de dados ao seu estado anterior.</p>
+
+        <h1>Linguagens</h1>
+        <h2>Linguagem de consulta estruturada (Structured Query Language - SQL)</h2>
+        <p>SQL é a linguagem padrão para gerenciar e manipular bancos de dados relacionais. Ela é usada para realizar operações como inserção, consulta, atualização e exclusão de dados, além de gerenciar a estrutura do banco de dados.</p>
+        <h2>Linguagem de definição de dados (Data Definition Language - DDL)</h2>
+        <p>DDL é o subconjunto de SQL usado para definir e gerenciar a estrutura de um banco de dados, como criar, alterar ou excluir tabelas. Exemplos de comandos DDL incluem CREATE, ALTER e DROP.</p>
+        <h2>Linguagem de manipulação de dados (Data Manipulation Languagem - DML)</h2>
+        <p>DML é o conjunto de comandos SQL usados para manipular dados dentro de tabelas. Ele inclui operações como inserir, atualizar, excluir e consultar dados. Exemplos de comandos DML incluem INSERT, UPDATE, DELETE e SELECT.</p>
+        <h2>Linguagem de consulta de dados (Data Query Language - DQL)</h2>
+        <p>DQL é o subconjunto de SQL que trata exclusivamente da consulta de dados. O comando principal de DQL é o SELECT, que permite a recuperação de informações do banco de dados.</p>
+    </main>
+    
+</body>
+</html>
